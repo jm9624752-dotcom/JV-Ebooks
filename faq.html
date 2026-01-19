@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Perguntas Frequentes - JV E-books</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .faq-section {
+            padding: 120px 0 80px;
+            background: #f8fafc;
+            min-height: 100vh;
+        }
+
+        .faq-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .faq-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .faq-header h1 {
+            color: #1f2937;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .faq-header p {
+            color: #6b7280;
+            font-size: 1.1rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .faq-question {
+            background: #f8fafc;
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: #f1f5f9;
+        }
+
+        .faq-question h3 {
+            color: #1f2937;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 0;
+            flex: 1;
+        }
+
+        .faq-icon {
+            color: #6366f1;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .faq-answer.active {
+            padding: 1.5rem;
+            max-height: 200px;
+        }
+
+        .faq-answer p {
+            color: #4b5563;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .faq-answer a {
+            color: #6366f1;
+            text-decoration: none;
+        }
+
+        .faq-answer a:hover {
+            text-decoration: underline;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .back-button {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .nav-logo a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .contact-highlight {
+            background: #fef3c7;
+            border: 1px solid #f59e0b;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .contact-highlight h4 {
+            color: #92400e;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-highlight p {
+            color: #92400e;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .faq-content {
+                padding: 2rem 1.5rem;
+                margin: 0 1rem;
+            }
+            
+            .faq-header h1 {
+                font-size: 2rem;
+            }
+            
+            .faq-question h3 {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html"><h2>JV E-books</h2></a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html#home">Início</a></li>
+                    <li><a href="index.html#ebooks">E-books</a></li>
+                    <li><a href="index.html#about">Sobre</a></li>
+                    <li><a href="index.html#contact">Contato</a></li>
+                </ul>
+                <div class="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- FAQ Content -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="faq-content">
+                <div class="faq-header">
+                    <h1>🙋‍♂️ Perguntas Frequentes (FAQ)</h1>
+                    <p>Encontre respostas para as dúvidas mais comuns sobre nossos e-books</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>1. Como recebo o meu ebook após a compra?</h3>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>O envio é imediato e automático! Assim que o seu pagamento for confirmado, você receberá um link de download diretamente no e-mail cadastrado (<a href="mailto:jvebooks.oficial@gmail.com">jvebooks.oficial@gmail.com</a> é o nosso remetente oficial). Se pagar via Pix ou Cartão, o acesso chega em poucos minutos.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>2. Em qual formato os livros são entregues?</h3>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nossos ebooks são entregues no formato PDF, que é compatível com qualquer dispositivo (celular, tablet, computador ou Kindle). Alguns materiais também podem acompanhar versões em ePub para uma leitura mais fluida em leitores digitais.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>3. Posso ler o ebook sem internet?</h3>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim! Após fazer o download para o seu dispositivo, você terá acesso vitalício ao arquivo e poderá ler onde e quando quiser, mesmo sem conexão com a internet.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>4. O pagamento é seguro?</h3>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Totalmente. Utilizamos as plataformas de pagamento mais seguras do mercado, que contam com criptografia de ponta a ponta. Não armazenamos os dados do seu cartão de crédito.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>5. E se eu não receber o e-mail com o acesso?</h3>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Primeiro, verifique sua caixa de Spam ou a aba Promoções. Caso não encontre, basta enviar um e-mail para <a href="mailto:jvebooks.oficial@gmail.com">jvebooks.oficial@gmail.com</a> com o comprovante ou o seu nome completo, e nossa equipe enviará o link manualmente para você.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>6. Posso imprimir o ebook?</h3>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim, nossos arquivos são liberados para impressão para uso pessoal. Você pode imprimir o conteúdo em casa ou em uma gráfica para facilitar seus estudos.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>7. Os ebooks possuem garantia?</h3>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim! Oferecemos uma garantia de 7 dias. Se por qualquer motivo você sentir que o conteúdo não é para você, basta solicitar o reembolso dentro deste prazo e devolveremos 100% do seu dinheiro.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>8. Posso compartilhar o arquivo com outras pessoas?</h3>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>O conteúdo da JV Ebooks Digital é protegido por direitos autorais e o uso é estritamente individual. O compartilhamento ou revenda sem autorização é crime de pirataria e pode resultar em bloqueio do acesso.</p>
+                    </div>
+                </div>
+
+                <div class="contact-highlight">
+                    <h4>Ainda tem dúvidas?</h4>
+                    <p>Entre em contato conosco: <a href="mailto:jvebooks.oficial@gmail.com">jvebooks.oficial@gmail.com</a></p>
+                </div>
+
+                <div class="back-button">
+                    <a href="index.html" class="btn btn-primary">
+                        <i class="fas fa-arrow-left"></i> Voltar ao Site
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>JV E-books</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html#home">Início</a></li>
+                        <li><a href="index.html#ebooks">E-books</a></li>
+                        <li><a href="index.html#about">Sobre</a></li>
+                        <li><a href="index.html#contact">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Suporte</h4>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="politica-privacidade.html">Política de Privacidade</a></li>
+                        <li><a href="termos-de-uso.html">Termos de Uso</a></li>
+                        <li><a href="garantia.html">Garantia</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 JV E-books. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            const answer = faqItem.querySelector('.faq-answer');
+            
+            // Close all other FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                if (item !== faqItem) {
+                    item.classList.remove('active');
+                    item.querySelector('.faq-answer').classList.remove('active');
+                }
+            });
+            
+            // Toggle current FAQ item
+            faqItem.classList.toggle('active');
+            answer.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

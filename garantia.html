@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garantia - JV E-books</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .guarantee-section {
+            padding: 120px 0 80px;
+            background: #f8fafc;
+            min-height: 100vh;
+        }
+
+        .guarantee-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .guarantee-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .guarantee-header h1 {
+            color: #1f2937;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .guarantee-header p {
+            color: #6b7280;
+            font-size: 1.2rem;
+        }
+
+        .guarantee-seal {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 2rem 0;
+            box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+        }
+
+        .guarantee-seal h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .guarantee-seal p {
+            font-size: 1.1rem;
+            margin: 0;
+            opacity: 0.95;
+        }
+
+        .guarantee-details {
+            margin: 2.5rem 0;
+        }
+
+        .guarantee-details h3 {
+            color: #1f2937;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #6366f1;
+        }
+
+        .guarantee-details p {
+            color: #4b5563;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .guarantee-steps {
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid #6366f1;
+            margin: 2rem 0;
+        }
+
+        .guarantee-steps h4 {
+            color: #1f2937;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .guarantee-steps ol {
+            margin-left: 1.5rem;
+        }
+
+        .guarantee-steps li {
+            color: #4b5563;
+            line-height: 1.7;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info {
+            background: #fef3c7;
+            border: 1px solid #f59e0b;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .contact-info h4 {
+            color: #92400e;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info p {
+            color: #92400e;
+            margin: 0;
+            font-size: 1.1rem;
+        }
+
+        .contact-info a {
+            color: #92400e;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .benefit-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: #f8fafc;
+            border-radius: 8px;
+        }
+
+        .benefit-item i {
+            font-size: 2.5rem;
+            color: #6366f1;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-item h4 {
+            color: #1f2937;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .benefit-item p {
+            color: #6b7280;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .back-button {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .nav-logo a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        @media (max-width: 768px) {
+            .guarantee-content {
+                padding: 2rem 1.5rem;
+                margin: 0 1rem;
+            }
+            
+            .guarantee-header h1 {
+                font-size: 2rem;
+            }
+            
+            .guarantee-seal h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html"><h2>JV E-books</h2></a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html#home">Início</a></li>
+                    <li><a href="index.html#ebooks">E-books</a></li>
+                    <li><a href="index.html#about">Sobre</a></li>
+                    <li><a href="index.html#contact">Contato</a></li>
+                </ul>
+                <div class="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Guarantee Content -->
+    <section class="guarantee-section">
+        <div class="container">
+            <div class="guarantee-content">
+                <div class="guarantee-header">
+                    <h1><i class="fas fa-shield-alt"></i> Nossa Garantia</h1>
+                    <p>Sua satisfação é nossa prioridade absoluta</p>
+                </div>
+
+                <div class="guarantee-seal">
+                    <h2>🛡️ GARANTIA BLINDADA DE 7 DIAS</h2>
+                    <p><strong>RISCO ZERO:</strong> Teste o conteúdo por uma semana inteira. Se não gostar, eu te devolvo cada centavo. O seu investimento está protegido.</p>
+                </div>
+
+                <div class="guarantee-details">
+                    <h3>Garantia de Satisfação Incondicional – 7 Dias</h3>
+                    <p>Na JV Ebooks Digital, nossa prioridade é o seu aprendizado e satisfação. Por isso, oferecemos uma garantia incondicional de 7 dias.</p>
+                    
+                    <div class="guarantee-steps">
+                        <h4>Como funciona?</h4>
+                        <ol>
+                            <li>Você adquire o seu ebook hoje</li>
+                            <li>Baixa o conteúdo e começa a ler</li>
+                            <li>Se em até 7 dias você decidir que o material não é para você</li>
+                            <li>Ou se por qualquer motivo não estiver 100% satisfeito</li>
+                            <li>Nós devolvemos todo o seu dinheiro</li>
+                        </ol>
+                        <p><strong>Sem perguntas, sem burocracia e sem letras miúdas.</strong></p>
+                    </div>
+                </div>
+
+                <div class="contact-info">
+                    <h4>Para solicitar o reembolso:</h4>
+                    <p>Basta enviar um único e-mail para: <a href="mailto:jvebooks.oficial@gmail.com">jvebooks.oficial@gmail.com</a></p>
+                </div>
+
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <i class="fas fa-heart"></i>
+                        <h4>Confiança</h4>
+                        <p>Reduz o "medo" de comprar algo digital e não ser o que você esperava</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-star"></i>
+                        <h4>Autoridade</h4>
+                        <p>Mostra que confiamos tanto na qualidade que não temos medo de devolver o dinheiro</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-lock"></i>
+                        <h4>Segurança</h4>
+                        <p>Sua compra é 100% segura e garantida por 7 dias completos</p>
+                    </div>
+                </div>
+
+                <div class="guarantee-seal" style="background: linear-gradient(135deg, #6366f1, #8b5cf6);">
+                    <h2>💯 Compromisso Total</h2>
+                    <p>Sua compra é 100% segura e garantida! Você tem 7 dias para testar o ebook. Se não ficar satisfeito com o que aprender, garantimos o seu reembolso total. <strong>O risco é todo meu!</strong></p>
+                </div>
+
+                <div class="back-button">
+                    <a href="index.html" class="btn btn-primary">
+                        <i class="fas fa-arrow-left"></i> Voltar ao Site
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>JV E-books</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html#home">Início</a></li>
+                        <li><a href="index.html#ebooks">E-books</a></li>
+                        <li><a href="index.html#about">Sobre</a></li>
+                        <li><a href="index.html#contact">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Suporte</h4>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="politica-privacidade.html">Política de Privacidade</a></li>
+                        <li><a href="termos-de-uso.html">Termos de Uso</a></li>
+                        <li><a href="garantia.html">Garantia</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 JV E-books. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
